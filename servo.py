@@ -67,4 +67,5 @@ if __name__ == '__main__':
                 print(servo.get_pulse_width())
                 sleep(1)
     except KeyboardInterrupt:
-        servo.rotate(0)
+        pass
+
