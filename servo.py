@@ -4,11 +4,14 @@ from machine import Pin, PWM
 class Servo:
     def __init__(self, pwm_pin:int, min_pulse_ms:float = 0.5, max_pulse_ms:float = 2.4, frequency:int = 50) -> None:
         '''Una clase para el Servo motor.\n
-           Args:
-                pwm_pin: El pin de la señal PWM.
-                min_pulse: El pulso mínimo en milisegundos.
-                max_pulse: El pulso máximo en milisegundos.
-                frequency: La frecuencia en Hz.'''
+            :param pwm_pin: El pin de la señal PWM.
+            :type pwm_pin: int
+            :param min_pulse_ms: El pulso mínimo en milisegundos.
+            :type min_pulse_ms: float
+            :param max_pulse_ms: El pulso máximo en milisegundos.
+            :type max_pulse_ms: float
+            :param frequency: La frecuencia en Hz.
+            :type frequency: int'''
         self.__servo = PWM(Pin(pwm_pin), freq = frequency)
         self.__min_pulse_ns = min_pulse_ms * 1_000_000
         self.__max_pulse_ns = max_pulse_ms * 1_000_000
@@ -57,7 +60,6 @@ class Servo:
 if __name__ == '__main__':
     servo = Servo(pwm_pin = 0, min_pulse_ms = 0.5, max_pulse_ms = 2.4, frequency = 50)
     from time import sleep
-
     try:
         while True:
             for degree in [0, 45, 90, 135, 180]:
