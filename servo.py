@@ -2,7 +2,6 @@
 from machine import Pin, PWM
 
 class Servo:
-
     def __init__(self, pwm_pin:int, min_pulse_ms:float = 0.5, max_pulse_ms:float = 2.4, frequency:int = 50) -> None:
         '''Una clase para el Servo motor.\n
            Args:
@@ -68,3 +67,4 @@ if __name__ == '__main__':
 
     except KeyboardInterrupt:
         servo.rotate(0)
+
