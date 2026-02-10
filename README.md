@@ -10,7 +10,7 @@ A simple MicroPython library for micro-servo.
 from servo import Servo
 from time import sleep
 
-'''---Creating the object servo with characteristics---'''
+'''---Creating the object servo with it's characteristics---'''
 my_servo = Servo(pwm_pin=0, min_pulse=500_000, max_pulse=2_400_000, frequency=50)
 
 '''---Movments---'''
