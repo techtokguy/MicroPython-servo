@@ -11,7 +11,7 @@ from servo import Servo
 from time import sleep
 
 '''---Creating the object servo with it's characteristics---'''
-my_servo = Servo(pwm_pin=0, min_pulse=500_000, max_pulse=2_400_000, frequency=50)
+my_servo = Servo(pwm_pin=0, min_pulse_ms=0.5, max_pulse_ms=2.4, frequency=50)
 
 '''---Movments---'''
 for degree in [0, 45, 90, 135, 180]:
