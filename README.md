@@ -9,7 +9,11 @@ A simple MicroPython library for micro-servo.
 ```python
 from servo import Servo
 from time import sleep
+
+'''---Creating the object servo with characteristics---'''
 my_servo = Servo(pwm_pin=0, min_pulse=500_000, max_pulse=2_400_000, frequency=50)
-for degree in [0, 90, 180]:
+
+'''---Movments---'''
+for degree in [0, 45, 90, 135, 180]:
   my_servo.rotate(degree)
   sleep(1)
