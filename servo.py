@@ -57,6 +57,10 @@ class Servo:
         '''Retorna los grados actuales del servo.'''
         return self.__current_degrees
         
+    def disable(self) -> None:
+        '''Deshabilita el pin PWM asignado al Servo'''
+        self.__servo.disable()
+        
 if __name__ == '__main__':
     servo = Servo(pwm_pin = 0, min_pulse_ms = 0.5, max_pulse_ms = 2.4, frequency = 50)
     from time import sleep
