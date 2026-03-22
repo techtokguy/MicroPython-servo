@@ -1,4 +1,4 @@
-#Before you read
+# Before you read
 I did not write the code or the README file, this is just a fork that adds package.json file
 
 # MicroPython-servo
